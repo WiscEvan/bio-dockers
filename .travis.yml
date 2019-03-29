@@ -20,11 +20,12 @@ before_install:
     - docker build -t alexcoppe/bedtools bedtools/
     - docker build -t alexcoppe/bamtools bamtools/
     - docker build -t alexcoppe/trimmomatic trimmomatic/
+    - docker build -t evanrees/kwanlab:pal2nal pal2nal/
 
 script:
     - docker run -it --rm alexcoppe/trimmomatic -version
     - docker run -it --rm alexcoppe/fastqc
-    - docker run -it --rm -v $(pwd):/data alexcoppe/picard SortVcf I=/data/test-data/sample.vcf O=/data/sorted.vcf 
+    - docker run -it --rm -v $(pwd):/data alexcoppe/picard SortVcf I=/data/test-data/sample.vcf O=/data/sorted.vcf
     - docker run -it --rm alexcoppe/mutect -h
     - docker run -it --rm alexcoppe/gatk -h
     - docker run -it --rm -v $(pwd):/data alexcoppe/samtools view /data/test-data/sample.bam seq2:450-550
@@ -36,3 +37,4 @@ script:
     - docker run --rm -it alexcoppe/snpsift filter -version
     - docker run --rm -it -v $(pwd):/data alexcoppe/bedtools intersectBed -a /data/test-data/sample.vcf -b /data/test-data/sample.vcf
     - docker run --rm -it alexcoppe/bamtools
+    - docker run --rm evanrees/kwanlab:pal2nal pal2nal.pl -h
