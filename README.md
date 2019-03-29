@@ -1,16 +1,16 @@
 # bio-dockers
 ### :whale: Dockerized bioinformatic tools.
 
-[![Build Status](https://travis-ci.org/alexcoppe/bio-dockers.svg?branch=master)](https://travis-ci.org/alexcoppe/bio-dockers)
+[![Build Status](https://travis-ci.org/alexcoppe/bio-dockers.svg?branch=master)](https://travis-ci.org/wiscevan/bio-dockers)
 
-A set of bioinformatics applications installed into a [Docker](https://www.docker.com) container, ready to be downloaded and used on any operating system 
+A set of bioinformatics applications installed into a [Docker](https://www.docker.com) container, ready to be downloaded and used on any operating system
 supported by [Docker](https://www.docker.com/).
 
-All images are based on the [official Alpine Linux Docker image](https://hub.docker.com/_/alpine/) 
+All images are based on the [official Alpine Linux Docker image](https://hub.docker.com/_/alpine/)
 which is only 5 MB of size. The main goal is to obtain decently small portable bioinformatics software, easy to install and run.
 
-In order to use a container on your computer, [install](https://docs.docker.com/engine/installation/) 
-the Docker daemon and check the links in the table 
+In order to use a container on your computer, [install](https://docs.docker.com/engine/installation/)
+the Docker daemon and check the links in the table
 below for instruction on how to pull the images from [Dockerhub](https://hub.docker.com/) and run them.
 
 | Program        | Description| Version | Image size |
@@ -31,4 +31,4 @@ below for instruction on how to pull the images from [Dockerhub](https://hub.doc
 | [Trimmomatic](https://github.com/alexcoppe/bio-dockers/tree/master/trimmomatic) | A flexible read trimming tool for Illumina NGS data | 0.38 | 172 MB |
 | [VarDictJava](https://github.com/alexcoppe/bio-dockers/tree/master/vardict) |  A variant discovery program written in Java and Perl. It is a partial Java port of VarDict variant caller | 1.5.1 | 631 MB |
 | [VarScan](https://github.com/alexcoppe/bio-dockers/tree/master/varscan) | Variant detection in massively parallel sequencing data | 2.4.3 | 124 MB |
-
+| [Pal2Nal](https://github.com/wiscevan/bio-dockers/tree/master/pal2nal) | Protein alignment to nucleotide alignment to calculate non-synonymous to synonymous codon usage | (v14) | 1.17 GB |
